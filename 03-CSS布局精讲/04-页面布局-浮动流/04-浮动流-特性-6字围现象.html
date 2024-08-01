@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-浮动流-特性-4浮动的顺序</title>
+
+    <style>
+        .box1 {
+            width: 800px;
+            height: 400px;
+            background-color: tomato;
+        }
+
+        .box2 {
+            width: 400px;
+            height: 200px;
+            background-color: cyan;
+            float: left;
+        }
+
+        .box3 {
+            width: 300px;
+            height: 100px;
+            background-color: orange;
+            /*float: left;*/
+        }
+
+        /*浮动元素不会遮挡标准流元素的文本内容,就近显示*/
+        .box4 {
+            width: 100%;
+            height: 80px;
+            background-color: pink;
+            /*float: left;*/
+        }
+
+    </style>
+</head>
+<body>
+     <div class="box1">
+
+        <div class="box2">
+            box2
+        </div>
+
+        <div class="box3">
+            box3
+        </div>
+
+        <div class="box4">
+            box4
+        </div>
+
+    </div>
+
+</body>
+</html>

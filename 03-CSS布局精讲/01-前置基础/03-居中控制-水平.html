@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03-居中控制-水平</title>
+    <style>
+        .box {
+            width: 500px;
+            height: 300px;
+            background-color: tomato;
+            text-align: center;  /* 该属性可以控制行内和行内块级标签居中,这里需要注意的是p标签为块级标签 */
+        }
+
+
+        /*当需要块级标签水平居中又要保持宽高且独占一行,就要用盒子模型*/
+        .box>div {
+            background-color: cyan;
+            width: 200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    <div>div</div>
+        <span>xxx</span>
+    </div>
+</body>
+</html>
+
+

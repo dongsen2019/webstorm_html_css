@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01-显示模式</title>
+    <style>
+        /*块级标签独占一行,可以设置宽高*/
+        .box1,
+        .box2 {
+            width: 200px;
+            height: 100px;
+            background-color: tomato;
+        }
+    </style>
+
+    <style>
+        /*对于块级标签,子元素默认宽度与父元素一致*/
+        .box3 {
+            width: 300px;
+            height: 100px;
+            background-color: blueviolet;
+        }
+
+        .box4 {
+            height: 50px;
+            background-color: green;
+        }
+    </style>
+
+    <style>
+        /*对于行内块级标签,既不独占一行,也可以设置宽高*/
+        a {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+        box1
+    </div>
+
+    <div class="box2">
+        box2
+    </div>
+
+    <div class="box3">
+        box3
+        <div class="box4">
+            box4
+        </div>
+    </div>
+
+<!--    默认的行内块级标签有img和input-->
+    <span>111</span>
+    <!--行内标签不独占一行,宽高默认和内容一致,无法设置-->
+    <a href="#">xxx</a>
+    <span>222</span>
+    <span>333</span>
+</body>
+</html>
+
+
+
+

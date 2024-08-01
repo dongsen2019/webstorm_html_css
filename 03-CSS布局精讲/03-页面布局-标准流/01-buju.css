@@ -1,0 +1,29 @@
+.top {
+    height: 100px;
+    background-color: red;
+}
+
+.content {
+    height: 500px;
+    background-color: yellow;
+}
+
+.bottom {
+    height: 60px;
+    background-color: green;
+}
+
+.left {
+    height: 100%;
+    width: 20%;
+    background-color: blue;
+    display: inline-block;
+}
+
+.right {
+    height: 100%;
+    width: 80%;
+    background-color: cyan;
+    display: inline-block;
+    vertical-align: top;
+}

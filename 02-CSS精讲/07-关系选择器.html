@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07-关系选择器</title>
+    <style>
+        /*  > : 子代选择器 直接子元素范围内匹配p标签 */
+        .box>p {
+            font-size: 30px;
+        }
+
+        /* 空格: 后代选择器 在后代元素范围内匹配p标签 */
+        .box p {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>这是box里面的p标签</p>
+        <div class="top">
+            <p>这是top里面的p标签</p>
+        </div>
+        <div class="content">
+
+        </div>
+        <div class="bottom">
+
+        </div>
+        <p>这是box里面的p标签</p>
+    </div>
+</body>
+</html>

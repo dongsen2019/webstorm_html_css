@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02-Flex基本使用</title>
+    <style>
+        .box {
+            width: 50%;
+            height: 600px;
+            background-color: tomato;
+            margin: 100px auto;
+
+            display: flex; /*默认主轴:行的方向 侧轴:列的方向*/
+
+            flex-direction: row; /*设置主轴为行*/
+
+            /*如果在排列过程中空间不够,
+            默认策略: 按比例压缩每一个子盒子尺寸,让他们放到一整行
+            */
+            justify-content: center;
+
+            /*由于9个独立的box按row排列,所以每一列只有一个元素,
+            所以justify-items(没一列内的元素对齐方式)不起作用*/
+            /*justify-items: flex-end;*/
+
+
+            flex-wrap: wrap; /*排不下设置换行*/
+
+            /*侧轴方向的对齐方式(行内元素之间的对齐方式)*/
+            align-items: center; /*上下区域平分,将元素置于end处*/
+
+
+            /*每个独立行之间的对齐方式*/
+            align-content: space-between;
+
+        }
+
+        .c1 {
+            width: 100px;
+            height: 150px;
+            background-color: darkcyan;
+        }
+
+        .c2 {
+            width: 150px;
+            height: 200px;
+            background-color: orange;
+        }
+
+        .c3 {
+            width: 200px;
+            height: 50px;
+            background-color: deeppink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="c1">
+            c1
+        </div>
+
+        <div class="c2">
+            c2
+        </div>
+
+        <div class="c3">
+            c3
+        </div>
+
+        <div class="c1">
+            c11
+        </div>
+
+        <div class="c2">
+            c22
+        </div>
+
+        <div class="c3">
+            c33
+        </div>
+
+        <div class="c1">
+            c111
+        </div>
+
+        <div class="c2">
+            c222
+        </div>
+
+        <div class="c3">
+            c333
+        </div>
+    </div>
+</body>
+</html>

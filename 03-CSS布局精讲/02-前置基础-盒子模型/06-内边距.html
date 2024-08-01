@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06-内边距</title>
+    <style>
+        .box {
+            width: 400px;
+            height: 300px;
+            background-color: tomato;
+            border: 10px solid darkcyan;
+            padding: 20px;
+        }
+
+        .box2 {
+            width: 400px;
+            height: 300px;
+            background-color: tomato;
+            border: 10px solid darkcyan;
+            padding: 10px 20px 30px 40px; /*内边距按上右下左设置,为了保证字的完整性右边距不一定一样*/
+        }
+
+        .box-small {
+            width: 100%;
+            height: 100%;
+            background-color: cyan;
+        }
+
+        img {
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        撩课学院
+        <a href="#">xxx</a>
+        <span>xxx</span>
+        <img src="../01-前置基础/01-显示模式/1-div和span标签.png" alt="">
+    </div>
+
+    <div class="box2">
+        <div class="box-small">small</div>
+    </div>
+</body>
+</html>

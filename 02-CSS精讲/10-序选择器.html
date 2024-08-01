@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10-序选择器</title>
+    <!--序选择器-->
+    <style>
+        /*序选择器:选择class="box"的第一个子节点*/
+        .box>p:first-child {
+            color:red;
+        }
+        /*序选择器:选择class="box"的第n个子节点*/
+        .box>p:nth-child(2) {
+            color: grey;
+        }
+
+        .box>p:nth-child(3) {
+            color: blue;
+        }
+        /*序选择器:选择class="box"的最后一个子节点*/
+        .box>p:last-child {
+            color: darkcyan;
+            font-size: 30px;
+        }
+
+        .box>p:first-letter {
+            font-size: 28px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+        <p>第一名</p>
+        <p>第二名</p>
+        <p>第三名</p>
+        <p>第四名</p>
+        <p>第五名</p>
+    </div>
+</body>
+</html>

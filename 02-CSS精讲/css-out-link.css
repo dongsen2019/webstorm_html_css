@@ -1,0 +1,25 @@
+/*
+    1.选择器
+        所写样式,会作用于哪些标签
+    2-提交修改.一组的样式
+    {
+        样式属性: 样式值;
+        样式属性: 样式值;
+        color: red;
+    }
+ */
+h2 {
+    text-align: center;
+    font-size: 28px;
+    color: orange;
+    letter-spacing: 6px;
+}
+
+p {
+    text-align: center;
+    color: tomato;
+    font-size: 18px;
+    letter-spacing: 10px;
+    text-shadow: 5px 5px 2px grey;
+
+}

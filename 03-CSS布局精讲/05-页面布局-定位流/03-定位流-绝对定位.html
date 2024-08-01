@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03-定位流-绝对定位</title>
+    <style>
+
+        body {
+
+            position: relative;
+        }
+
+        .big {
+            width: 500px;
+            height: 500px;
+            background-color: tomato;
+            margin: 100px auto;
+
+        }
+
+        .small {
+            width: 200px;
+            height: 200px;
+            background-color: cyan;
+
+            /*绝对定位寻找最近的定位流祖先元素(相对定位,绝对定位,固定定位等...)
+            而且是首屏各个点位的参照尺寸*/
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="big">
+        <div class="small">
+
+        </div>
+    </div>
+</body>
+</html>

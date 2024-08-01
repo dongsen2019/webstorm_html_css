@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>20-HTML5新增标签</title>
+</head>
+<body>
+    <form action="">
+        <!--这个新增的下拉选择框有输入和补全功能-->
+        <input type="text" list = "dt" name="wangshunzi">
+        <datalist id = "dt">
+            <option label="百度" value="www.baidu.com" ></option>
+            <option label="撩课" value="www.itlike.com"></option>
+        </datalist>
+
+        <!--用type值控制控件框的特定类型,新特性标签可以验证输入格式-->
+        <input type="text" name="url" >
+        <input type="email" name="email" >
+        <input type="number" name="number" min="0" max="10" step="3">
+        <input type="range" name="range" min="0" max="10" step="2">
+        <input type="color" name="color" >
+        <input type="date" name="date" >
+
+        <input type="submit" value="提交">
+
+
+    </form>
+</body>
+</html>

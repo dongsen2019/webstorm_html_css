@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>09-项目初始化样式-清空内外边距</title>
+<!--    使用css reset清空样式-->
+    <link rel="stylesheet" href="./css/html5_reset_stylesheet.css">
+    <style>
+        .box {
+            width: 500px;
+            height: 500px;
+            background-color: tomato;
+        }
+        p {
+            /*清空p标签的默认边距*/
+            /*margin: 0;*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <!--p标签默认有上下边距各16px,会导致页面布局受这个边距的影响-->
+        <p>这是一个段落</p>
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+        </ul>
+    </div>
+</body>
+</html>
+

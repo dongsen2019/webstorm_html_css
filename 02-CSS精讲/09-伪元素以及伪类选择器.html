@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>09-伪元素以及伪类选择器</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            color: #ffffff;
+        }
+        /* 伪类选择器: 不是只能施加在类名上,id,等其他属性均可施加*/
+        .box:hover {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            color: red;
+        }
+    </style>
+
+    <style>
+        /*伪元素::不是通过dom树编写的元素, 而是通过样式生成的虚拟元素*/
+        .price::before {
+            content: "$";
+        }
+
+        .rmb::after {
+            content: "元";
+            color: tomato;
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        box
+    </div>
+
+    <p class="price">1.23</p>
+    <p class="price">4.5</p>
+
+    <p class="rmb">199</p>
+</body>
+</html>

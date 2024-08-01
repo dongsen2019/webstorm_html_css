@@ -1,0 +1,25 @@
+/* 这个注释, 会被编译到目标文件当中*/
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: orange;
+}
+.box::after {
+  content: "xxx";
+}
+.box .small {
+  width: 100px;
+  height: 100px;
+  background-color: cyan;
+}
+.box .small:hover {
+  color: red;
+}
+.box .small p {
+  font-size: 30px;
+  color: tomato;
+}
+p {
+  color: orange;
+}
+/*# sourceMappingURL=01-注释-变量-嵌套.BaseCss.map */

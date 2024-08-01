@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>23-层叠_特异性-多个选择器</title>
+    <style>
+        /*
+        权重参考:
+        第一等级:代表 行内样式
+        第二等级:代表 ID选择器
+        第三等级:代表 calss|伪类|属性 选择器
+        第四等级:代表 标签|伪元素 选择器
+        通用选择器(*)，子选择器(>)， 相邻同胞选择器(+),等选择器不在4等级之内，所以它们的权值都为 0,0.0,0;
+        */
+        p {
+            color: red;
+        }     /* 0,0,0,1 */
+
+        .xxx {
+            color: darkcyan;
+        }     /* 0,0,1,0*/
+
+        #one {
+            color: cyan;
+        }     /* 0,1,0,0 */
+    </style>
+
+    <style>
+        p {
+            font-size: 40px;
+            color: palevioletred !important;
+        }
+
+        /* 0, 0, 2-提交修改, 1 */
+        p.xxx.ooo {
+            color: red;
+        }
+        /* 0, 0, 1, 1 */
+        p.ooo {
+            color: green;
+        }
+        /* 0, 1, 0, 0 */
+        #one {
+            color: orchid;
+        }
+        /* 0, 1, 0, 1 */
+        p#one {
+            color: blue;
+        }
+        /* 0, 1, 1, 0 */
+        #one.xxx {
+            color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="box1">
+            <div class="box2">
+                <div class="box3">
+                <!-- 1,0,0,0 -->
+<!--                    <p id="one" class="xxx ooo" style="color: blueviolet">撩课</p>-->
+                    <p id="one" class="xxx ooo">撩课</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

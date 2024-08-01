@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-浮动流-特性</title>
+<!--    案例1 BaseCss-->
+    <style>
+        .box1 {
+            height: 300px;
+            width: 300px;
+            background-color: tomato;
+            float: right; /*浮动流的元素会漂浮在标准流的上层,此时它就不占用底层的空间*/
+        }
+
+        .box2 {
+            width: 150px;
+            height: 150px;
+            background-color: darkcyan; /*浮动流只有水平排版没有居中排版*/
+        }
+
+        .blank {
+            width: 100%;
+            height: 100px;
+            background-color: white;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+<!--    案例1:不嵌套-->
+    <div class="box1">
+
+    </div>
+
+    <div class="box2">
+
+    </div>
+
+    <div class="blank">
+
+    </div>
+
+
+
+
+
+
+</body>
+</html>
+
+
+

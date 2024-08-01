@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>18-下拉选择框</title>
+</head>
+<body>
+<form action="">
+    <!--当 option 标签不指定 value 值时,则传参中文文本-->
+    <select name="sheng">
+        <option value="shanghai">上海</option>
+        <option>北京</option>
+        <option>广东</option>
+    </select>
+
+    <!--默认选项用selected属性指定;-->
+    <select name="address" size="1">
+        <optgroup label="上海">
+            <option value="songjiang">松江区</option>
+            <option value="qingpu">黄浦区</option>
+            <option>青浦区</option>
+        </optgroup>
+        <optgroup label="北京">
+            <option selected>顺义区</option>
+            <option>区1</option>
+            <option>区2</option>
+        </optgroup>
+        <optgroup label="广东">
+            <option>广州</option>
+            <option>深圳</option>
+        </optgroup>
+    </select>
+
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>

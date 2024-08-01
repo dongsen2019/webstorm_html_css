@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01-过渡动画</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 300px;
+            background-color: darkcyan;
+            margin: 100px auto;
+            border: 5px solid pink;
+
+            opacity: 1; /*透明度*/
+            transition: opacity 2s linear 1s;
+        }
+
+        .box:hover {
+            /*transform: rotate(50deg);*/
+            width: 400px;
+            height: 500px;
+            background-color: cyan;
+
+            border: 10px solid red;
+
+            opacity: 0;
+
+            /*过度动画: 针对哪个属性做变化, 变化的总时间, 均速变化 延迟时间*/
+            /*transition: width 500ms linear 1s;*/
+            /*transition: border 500ms linear 1s;*/
+            /*transition: opacity 500ms linear 1s;*/
+        }
+    </style>
+
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>

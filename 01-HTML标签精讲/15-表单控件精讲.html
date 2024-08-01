@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15-表单控件精讲</title>
+</head>
+<body>
+<form action="/">
+    <!--for表示绑定哪个一个input的id,且点击文本获取输入框焦点-->
+    <!--<label for="1">搜索框</label> -->
+    <!--<input type="text" name="a" id="1">-->
+
+    <!--
+    name: 提交表单时,发送get请求时控件框值对应的参数名称; id: 供label标签绑定; value: 控件框的默认值;
+    maxlength: 字符串最大长度限制; minlength: 字符串最小长度限制; disabled: 表单控件被禁用,提交时不传参; readonly: 控件只读
+    -->
+<!--    <label for="1">第一段测试</label>-->
+<!--    <input type="text" name="para" id="1" value="abc" maxlength="5" minlength="2" disabled>-->
+<!--    <input type="text" name="para2" id="2" value="abc" readonly>-->
+
+    <!--autofocus: 默认获取焦点; placeholder: 默认提示占位符; required: 必填项-->
+<!--    <label for="3">第二段测试</label>-->
+<!--    <input type="text" name="para" id="3" autofocus placeholder="请输入账号" required>-->
+<!--    <input type="text" name="para2" id="4" placeholder="请输入密码">-->
+
+    <!--password类型的输入框为密文输入-->
+<!--    <label for="5">密码</label>-->
+<!--    <input type="password" name="pwd" id="5">-->
+
+    <!--
+    将2个input:radio的name属性设置为相同可以实现互斥单选的效果
+    name和value为提交表单的参数名和对应的参数值
+    checked属性为默认该选项被选中
+    -->
+<!--    <label><input type="radio" name="sex" value="male">男</label>-->
+<!--    <label><input type="radio" name="sex" value="female" checked>女</label>-->
+
+    <!--CheckBox复选框-->
+    <label><input name="ah" value="篮球" type="checkbox" checked>篮球</label>
+    <label><input name="ah" value="足球" type="checkbox">足球</label>
+    <label><input name="ah" value="高尔夫球" type="checkbox">高尔夫球</label>
+    <label><input name="ah" value="乒乓球" type="checkbox">乒乓球</label>
+    <label><input name="ah" value="排球" type="checkbox" checked>排球</label>
+
+
+    <input type="submit" value="提交">
+
+</form>
+
+<!--提交表单当有些值为固定值时,可以使用input:hidden类型的控件框隐藏起来-->
+
+<form action="https://image.baidu.com/search/index">
+    <label>
+        <input type="text" name="tn" value="baiduimage" hidden readonly id="1">
+    </label>
+    <label>
+        <input type="text" name="word" id="2">
+    </label>
+
+    <input type="submit" value="提交">
+</form>
+
+<form action="/">
+    <!--accept用来限定图片的格式*表示全部类型,image/jpg, image/png:则为仅支持上传这两种图片-->
+    <input type="file" name="header" accept="image/*">
+    <input type="submit" value="上传图片">
+
+</form>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12-谷歌图标案例</title>
+    <!--使用类 子代 和 序选择器实现-->
+    <style>
+        .google-logo>span:first-child,
+        .google-logo>span:nth-child(4){
+            font-size: 60px;
+            color: rgb(66,133,244);
+            font-weight: bold;
+        }
+        .google-logo>span:nth-child(2),
+        .google-logo>span:nth-child(6) {
+            font-size:60px;
+            color: rgb(234,63,57);
+            font-weight: bold;
+        }
+        .google-logo>span:nth-child(3) {
+            font-size: 60px;
+            color: rgb(251,188,5);
+            font-weight: bold;
+        }
+        .google-logo>span:nth-child(5) {
+            font-size: 60px;
+            color: rgb(52,168,83);
+            font-weight: bold;
+        }
+        .google-logo>span:nth-child(6) {
+            transform: rotateZ(-10deg);
+            display: inline-block;
+        }
+    </style>
+
+    <style>
+        .logo-base {
+            font-size: 60px;
+            font-weight: bold;
+        }
+        .blue {
+            color: blue;
+        }
+        .red {
+            color: red;
+        }
+        .yellow {
+            color: yellow;
+        }
+        .green {
+            color: green;
+        }
+        .rotate {
+            transform: rotateZ(-10deg);
+            display: inline-block;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="google-logo">
+        <span class="blue rotate logo-base">G</span>
+        <span class="red logo-base">o</span>
+        <span class="yellow logo-base">o</span>
+        <span class="blue logo-base">g</span>
+        <span class="green logo-base">l</span>
+        <span class="red rotate logo-base">e</span>
+    </div>
+</body>
+</html>

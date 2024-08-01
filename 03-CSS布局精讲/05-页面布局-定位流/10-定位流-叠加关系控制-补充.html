@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>09-定位流-叠加关系控制</title>
+    <style>
+    /*
+    场景:父元素嵌套子元素
+    父元素没有设置z-index值;
+
+    1.默认情况下:
+    如果在父元素 z-index 没有设定: 子元素,叠加关系; z-index 谁大,那么就在上面
+    如果父 z-index 设置了; 那么,谁的比较大,它内部的子元素的 z-index 即使再小,也会在上面
+    */
+        .box1,
+        .box2 {
+            width: 200px;
+            height: 200px;
+            position: relative;
+
+        }
+
+
+        .box1 {
+            background-color: tomato;
+            left: 100px;
+            top: 80px;
+
+            /*z-index: 1;*/
+        }
+
+        .box2 {
+            background-color: darkcyan;
+
+        }
+
+        .small1,
+        .small2 {
+            width: 100px;
+            height: 100px;
+
+        }
+
+        .small1 {
+            background-color: cyan;
+            position: absolute;
+
+            left: 0;
+            top: 60px;
+
+            z-index: 999;  /*在两个不同的定位流基准的子元素,依旧遵循z-index原理*/
+        }
+
+        .small2 {
+            background-color: pink;
+            position: absolute;
+
+            left: 50px;
+            top: 0px;
+
+            z-index: 200;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1">
+        <div class="small1">
+            small1
+        </div>
+    </div>
+
+    <div class="box2">
+        <div class="small2">
+            small2
+        </div>
+    </div>
+</body>
+</html>

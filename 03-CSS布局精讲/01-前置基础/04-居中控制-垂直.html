@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-居中控制-垂直</title>
+    <style>
+        .box {
+            width: 300px;
+            line-height: 100px; /*此处没有设置父元素的高度,但是行高把父元素的高度撑起来了*/
+            background-color: tomato;
+        }
+
+        .box2 {
+            width: 300px;
+            line-height: 100px; /*此处p标签为块级元素,块级元素自身就有宽高,那么撑起来的就是块级元素自身的宽高*/
+            background-color: tomato;
+        }
+
+
+        .box3 {
+            width: 500px;
+            height: 300px;
+            background-color: orchid;
+            line-height: 300px;
+        }
+        img {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <p style="line-height: 50px">
+        这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落
+        这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落
+        这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落
+        这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落
+        这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落
+    </p>
+
+    <span style="line-height: 50px; background-color: cyan">这是一个段落</span>
+
+    <div class="box">xxx</div>
+
+    <div class="box2">
+        <p style="background-color: cyan">ppp</p>
+    </div>
+
+    <div class="box3">
+<!--        图片和字符的默认对齐方式为基准线对齐,可以使用vertical-align: center;进行垂直方向的中线对齐-->
+        <img src="./01-显示模式/1-div和span标签.png" alt="" style="vertical-align: middle">
+        <span style="background-color: #e9c6a0;">xyz</span>
+    </div>
+</body>
+</html>

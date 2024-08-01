@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-表格边框</title>
+    <style>
+        table,
+        table tr th,
+        table tr td
+        {
+            border: 2px solid tomato;
+            /*border-collapse: collapse;  !*两个单元格的外边框合并*!*/
+            margin: 10px; /*单元格与单元格之间的间距要用border-spacing控制*/
+            padding: 5px; /*单元格内容离内边距*/
+            border-spacing: 10px; /*调整单元格之间的距离*/
+        }
+
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+            border: 10px solid cyan;
+            outline: 5px dashed darkcyan; /*外轮廓线是加在边框border的外部*/
+            margin: 10px;
+        }
+
+        input {
+            margin-top: 20px;
+            border: none;
+            outline: none;
+            border-bottom: 1px dashed red;
+        }
+
+        input:focus {
+            margin-top: 20px;
+            border: none;
+            outline: none;
+            border-bottom: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>年龄</th>
+                <th>性别</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>sz</td>
+                <td>18</td>
+                <td>male</td>
+            </tr>
+            <tr>
+                <td>jh</td>
+                <td>19</td>
+                <td>female</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="box">
+
+    </div>
+
+
+
+    <input type="text">
+</body>
+</html>
+
+

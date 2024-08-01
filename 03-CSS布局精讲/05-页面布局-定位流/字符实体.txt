@@ -1,0 +1,52 @@
+HTML5 的字符实体是用于表示在 HTML 文档中不易直接输入的字符。以下是一些常见的 HTML5 字符实体：
+
+常见字符实体
+空格和符号
+&nbsp; ：不间断空格 (Non-Breaking Space)
+&lt; ：小于号 (<)
+&gt; ：大于号 (>)
+&amp; ：和号 (&)
+&quot; ：双引号 (")
+&apos; ：单引号 (')
+数学符号
+&plusmn; ：正负号 (±)
+&times; ：乘号 (×)
+&divide; ：除号 (÷)
+&frac12; ：二分之一 (½)
+&frac14; ：四分之一 (¼)
+&frac34; ：四分之三 (¾)
+货币符号
+&cent; ：美分 (¢)
+&pound; ：英镑 (£)
+&yen; ：日元 (¥)
+&euro; ：欧元 (€)
+&dollar; ：美元 ($)
+标点符号
+&iexcl; ：倒置感叹号 (¡)
+&iquest; ：倒置问号 (¿)
+&sect; ：节号 (§)
+&para; ：段落号 (¶)
+字母和重音符号
+&Aacute; ：Á
+&aacute; ：á
+&Eacute; ：É
+&eacute; ：é
+&Iacute; ：Í
+&iacute; ：í
+&Oacute; ：Ó
+&oacute; ：ó
+&Uacute; ：Ú
+&uacute; ：ú
+&Ntilde; ：Ñ
+&ntilde; ：ñ
+箭头
+&larr; ：左箭头 (←)
+&uarr; ：上箭头 (↑)
+&rarr; ：右箭头 (→)
+&darr; ：下箭头 (↓)
+其它常用实体
+&copy; ：版权符号 (©)
+&reg; ：注册商标符号 (®)
+&trade; ：商标符号 (™)
+&deg; ：度数符号 (°)
+&micro; ：微米 (µ)

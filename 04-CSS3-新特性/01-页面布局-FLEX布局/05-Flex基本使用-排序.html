@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05-Flex基本使用-排序</title>
+    <style>
+        .big {
+            width: 800px;
+            height: 400px;
+            background-color: tomato;
+            margin: 100px auto;
+
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .one,
+        .two,
+        .three {
+            width: 100px;
+        }
+
+
+        .one {
+            order: 3;
+            height: 150px;
+            width: 100px;
+            background-color: darkcyan;
+
+            align-self: flex-start;  /*控制单个元素的侧轴对齐方式*/
+        }
+
+        .two {
+            order: 1;
+            height: 150px;
+            background-color: cyan;
+
+            align-self: center;
+        }
+
+        .three {
+            order: 2;
+            height: 200px;
+            background-color: deeppink;
+
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="big">
+        <div class="one">one</div>
+        <div class="two">two</div>
+        <div class="three">three</div>
+    </div>
+</body>
+</html>
+
+

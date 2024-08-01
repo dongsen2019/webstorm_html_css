@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10-box-sizing</title>
+    <style>
+        .container {
+            width: 800px;
+            height: 500px;
+            background-color: tomato;
+        }
+
+        .left {
+            width: 50%;
+            height: 200px;
+            background-color: cyan;
+            display: inline-block;
+            padding: 10px;
+            border: 2px solid red;
+            /*box-sizing: content-box; !*指定宽高是内容的区域*!*/
+            box-sizing: border-box; /*指定宽高是整个盒子的区域*/
+        }
+
+        .right {
+            width: 50%;
+            height: 200px;
+            background-color: green;
+            display: inline-block;
+        /*    盒子的对齐方式默认按文字的基线对齐*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">left</div><div class="right">right</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06-常用的选择器</title>
+
+    <style>
+        /* 遍历dom树所有节点,作用于所有的a标签 */
+        a {
+            text-decoration: none;
+            color: grey;
+        }
+        /*类选择器*/
+        /*.one {*/
+        /*    color: red;*/
+        /*}*/
+        /*.four {*/
+        /*    color: orange;*/
+        /*}*/
+
+        /*给需要红色字体的标签类名增加一个 red-color类名,这样可以使代码不冗余*/
+        .red-color {
+            color: red;
+        }
+        .green-color {
+            color: green;
+        }
+        
+        /*标签和类组合选择器*/
+        a.one {
+            font-size: 30px;
+        }
+
+        /*id选择器*/
+        #navbar {
+            width: 400px;
+            height: 200px;
+            background-color: tomato;
+            color: white;
+        }
+
+        /*  *通配所有标签名 */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+<div id="navbar">
+    <a href="#"></a>ceshi 测试
+</div>
+
+<!--一个元素可以拥有多个类名; 多个类名之间通过空格做分割-->
+<!--class类名,可以重复-->
+<a href="#" class="one red-color">第一个链接</a>
+<a href="#" class="two green-color">第二个链接</a>
+<a href="#" class="three red-color">第三个链接</a>
+<a href="#" class="four">第四个链接</a>
+
+
+<p class="one">这是一个段落</p>
+
+<div>
+    <a href="#" class="five">第5个链接</a>
+</div>
+
+</body>
+</html>

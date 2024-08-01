@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-浮动流-特性-3</title>
+
+    <!--案例3-->
+    <style>
+        .box5 {
+            height: 300px;
+            width: 300px;
+            background-color: tomato;
+            padding: 20px;
+        }
+
+        .box6 {
+            width: 150px;
+            height: 150px;
+            background-color: darkcyan;
+            float: right; /*浮动流会将元素改为行内块级,既不独占一行也可以修改宽高尺寸*/
+        }
+    </style>
+
+</head>
+<body>
+<!--案例3:行内元素或块级元素浮动-->
+    <div class="box5">
+        <span class="box6">span</span>
+    </div>
+
+    <div class="blank">
+
+    </div>
+</body>
+</html>

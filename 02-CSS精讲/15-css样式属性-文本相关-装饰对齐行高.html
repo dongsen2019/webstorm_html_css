@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>15-css样式属性-文本相关-装饰对齐行高</title>
+    <style>
+        p {
+            font-size: 30px;
+            color: orangered;
+            text-decoration: line-through; /*line-through-中划线 underline-下划线 overline-上划线 */
+            text-decoration: line-through underline; /*需要多个复核划线,用空格隔开*/
+            background-color: darkcyan; /*设置p标签的背景颜色*/
+            text-align: center; /*文本的对齐方式*/
+        }
+        /*常用于去除a标签的下划线,变得更美观*/
+        a {
+            text-decoration: none;
+            background-color: tomato;
+        }
+
+        #ds {
+            background-color: tomato;
+            height: 200px;
+            line-height: 150px; /*文本行高会落在垂直方向像素高度的一半位置*/
+        }
+    </style>
+</head>
+<body>
+    <a href="#">超链接</a>
+    <p>
+        这是一个段落abc123
+    </p>
+
+    <p id="ds">
+        <a href="#">超链接2</a> <!--让p标签中的a标签居中-->
+    </p>
+</body>
+</html>

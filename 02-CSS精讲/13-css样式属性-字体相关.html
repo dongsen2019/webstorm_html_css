@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>13-css样式属性-字体相关</title>
+    <style>
+        @font-face {
+            font-family: "itlike";
+            src: url("./itlike_font.ttf");  /* 自定义字体, 用户同时下载开发定义的字体文件 */
+        }
+
+        p {
+            font-size: 30px; /*字体大小*/
+            font-style: italic; /* 字体风格: italic-倾斜 normal-正常 */
+            font-weight: bold; /* 字体粗细: bold-变粗 normal-正常 */
+            font-family: 幼圆, sans-serif; /* 字体, 通用的字体家族 */
+            font-family: itlike; /*使用自定义的字体*/
+        }
+    </style>
+</head>
+<body>
+
+
+<p>
+    这是一个段落abc
+</p>
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>14-表单标签</title>
+</head>
+<body>
+<!--
+url:https://www.baidu.com/s
+method: get
+params: wd = 关键字
+-->
+
+<!--
+1.定义一个表单域
+form:
+action: 到时候,表单域内部的表单控件,采集的信息,一旦被提交以后,往哪一个地址去提交
+method
+-->
+
+<form action="https://www.baidu.com/s" method="get">
+    
+    <!--表单控件-->
+    <label>
+        搜索的关键字: <input type="text" name="wd">
+    </label>
+    <input type="submit" value="搜索">
+</form>
+
+
+
+</body>
+</html>

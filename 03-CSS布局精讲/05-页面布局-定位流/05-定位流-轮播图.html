@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05-定位流-轮播图</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 590px;
+            height: 470px;
+            background-color: tomato;
+            margin: 50px auto;
+
+            position: relative;
+        }
+
+        ul.images {
+            height: 100%;
+            width: 100%;
+            background-color: cyan;
+
+            box-sizing: border-box;
+            list-style: none;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        ul.images>li {
+            width: 100%;
+            height: 100%;
+            background-color: darkcyan;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            display: none;
+        }
+
+        ul.images>li.current {
+            display: block;
+        }
+
+        .left,
+        .right {
+            width: 25px;
+            height: 35px;
+            background-color: rgba(0,0,0,0.5);
+            color: #ffffff;
+            text-align: center;
+            line-height: 35px;
+        }
+
+        .left {
+            border-top-right-radius: 20px ;
+            border-bottom-right-radius: 20px ;
+
+            position: absolute;
+            top: 235px;
+            left: 0;
+        }
+
+        .right {
+            border-top-left-radius: 20px ;
+            border-bottom-left-radius: 20px ;
+
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+        }
+
+        .pointer {
+            width: 85px;
+            height: 16px;
+            /*background-color: orange;*/
+
+            position: absolute;
+            bottom: 15px;
+            left: 25px;
+
+            line-height: 12px;
+        }
+
+        span {
+            width: 7px;
+            height: 7px;
+            margin-right: 4px;
+            border: 1px solid rgba(0,0,0,.05);
+            background: rgba(255,255,255,.4);
+            display: inline-block;
+            border-radius: 50%;
+        }
+
+        span.current {
+            width: 9px;
+            height: 9px;
+            position: relative;
+            top: 2px;
+            left: 0;
+            border: 3px solid rgba(0,0,0,.1);
+            display: inline-block;
+            border-radius: 50%;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="box">
+        <ul class="images">
+            <li class="current">
+                <img src="https://imgcps.jd.com/img-cubic/creative_server_cia_jdcloud/v2/2000318/100071197880/FocusFullshop/CkNqZnMvdDEvMjMyMDg2LzM1LzIxMzcwLzU3NDQ3LzY2N2RmMjBiRjE0ZTQxZWYyL2ExMDNjY2NhNTQxMTM4YzkucG5nEgkzLXR5XzBfNTQwAji-i3pCDwoLdml2b2lRT08gMTIQAUIWChLnsr7lvankuI3lrrnplJnov4cQAkIQCgznq4vljbPmiqLotK0QBkIKCgblipvojZAQB1i4mdXl9AI/cr/s/q.jpg" alt="">
+            </li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+        <div class="left">&lt;</div>
+        <div class="right">&gt;</div>
+        <div class="pointer">
+            <span class="current"></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+</body>
+</html>

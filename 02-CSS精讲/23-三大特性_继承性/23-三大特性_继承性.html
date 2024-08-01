@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>23-三大特性_继承性</title>
+    <!--一般与字体相关的父元素属性会被后代元素集成-->
+    <style>
+        .big-box {
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .box {
+            width: 300px;
+            height: 400px;
+            background-color: tomato;
+            color: #e9c6a0;
+        }
+
+        p {
+            border: 1px solid cyan;
+        }
+    </style>
+
+    <!--超链接的下划线样式为特例-->
+    <style>
+        .box2 {
+            font-size: 60px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="big-box">
+        <div class="box">
+            <p>撩课学院</p>
+            <h1>撩课</h1>
+        </div>
+    </div>
+
+    <div class="box2">
+        <a href="#">abc</a>
+    </div>
+</body>
+</html>
+

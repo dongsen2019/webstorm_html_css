@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02-定位流-相对定位</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            margin-left: 200px;
+
+            /*绝对定位不关注div的显示模式*/
+            display: inline;
+        }
+
+        .box1 {
+            background-color: tomato;
+        }
+
+        /*绝对定位相对于HTML定位,方位词的px距离+margin外边距的距离*/
+        .box2 {
+            background-color: cyan;
+
+            position: absolute;
+            left: 100px;
+            top: 100px;
+        }
+
+        .box3 {
+            background-color: orange;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

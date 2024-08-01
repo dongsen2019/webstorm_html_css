@@ -1,0 +1,37 @@
+// 这个注释, 不会生成到目标文件当中
+/* 这个注释, 会被编译到目标文件当中*/
+
+//1.声明/定义一个变量
+@themeColor: orange;
+@sel: .box;
+@pro: height;
+
+
+//@{sel}
+
+//嵌套写法
+.box {
+  width: 200px;
+  @{pro}: 200px;
+  background-color: @themeColor;
+  &::after {  //&表示当前的选择器
+    content: "xxx";
+  }
+  .small {
+    width: 100px;
+    height: 100px;
+    background-color: cyan;
+    &:hover {
+      color: red;
+    }
+    p {
+      font-size: 30px;
+      color: tomato;
+    }
+  }
+}
+
+p {
+  color: @themeColor;
+}
+

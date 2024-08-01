@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>22-dota案例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #000000;
+        }
+
+        .bg {
+            margin: auto;
+            width: 1920px;
+            height: 1694px;
+            /*background-color: tomato;*/
+            background-image: url("bg.jpg");
+            background-repeat: no-repeat;
+            background-position: center top;
+            overflow: hidden;
+        }
+
+        .small {
+            width: 550px;
+            height: 200px;
+            background-color: blue;
+            margin: 442px auto;
+        }
+
+        .video {
+            width: 1482px;
+            height: 952px;
+            /*background-color: green;*/
+            margin: 100px auto;
+        }
+
+        video::-internal-media-controls {
+            display: none;
+        }
+        video::-webkit-media-controls {
+            display: none;
+        }
+        video::-moz-media-controls {
+            display: none;
+        }
+        video::-ms-media-controls {
+            display: none;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="bg">
+        <div class="video">
+            <video src="倾天之战.webm" width="1482" height="952" controls autoplay muted loop></video>
+        </div>
+        <div class="small"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>13-表格标签</title>
+    <!--border-collapse: collapse(将表格的边框厚度变为细线)-->
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+
+<!--emmet语法 $表示数字占位符,@可指定从几开始-->
+tr>td{数据$@8}*8
+
+<!--主要展示一些有组织关系的数据-->
+<table border="1">
+    <tr>
+        <td>11</td>
+        <td>12</td>
+        <td rowspan="2">13</td>
+    </tr>
+    <tr>
+        <td>21</td>
+        <td>22</td>
+    </tr>
+    <tr>
+        <td colspan="3">31</td>
+    </tr>
+</table>
+
+<!--有表格头的表格-->
+<table border="1">
+    <tr>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>性别</th>
+    </tr>
+    <tr>
+        <th>sz</th>
+        <th>18</th>
+        <th>男</th>
+    </tr>
+    <tr>
+        <th>ds</th>
+        <th>33</th>
+        <th>女</th>
+    </tr>
+</table>
+
+<!--复杂的表格-->
+<!--align-对其方式 bgcolor-背景色-->
+<table border="1" width="300" align="center" bgcolor="#7fffd4">
+    <caption>表格的标题</caption>
+
+    <thead>
+        <tr align="center">
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>性别</th>
+        </tr>
+    </thead>
+
+    <tfoot>
+        <tr>
+            <td colspan="3">这是表格的底部</td> <!--colsapn-跨列数 rowspan跨行数-->
+        </tr>
+    </tfoot>
+
+    <tbody>
+        <tr align="right">
+            <td height="30">sz</td>
+            <td>18</td>
+            <td align="center">男</td>
+        </tr>
+        <tr>
+            <td>ds</td>
+            <td>33</td>
+            <td>男</td>
+        </tr>
+        <tr>
+            <td>小芳</td>
+            <td>16</td>
+            <td>女</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

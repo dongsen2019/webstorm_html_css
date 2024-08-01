@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-Flex基本使用-尺寸比例分配</title>
+    <style>
+        .big {
+            width: 800px;
+            height: 400px;
+            background-color: tomato;
+            margin: 100px auto;
+
+            display: flex;
+
+        }
+
+        .one,
+        .two,
+        .three {
+            /*width: 100px;*/
+        }
+        /*flex布局高度方向自动拉伸*/
+        /*flex值,先拿总长减去确定的盒子宽度,然后按剩余盒子的flex比例分配剩下的宽度*/
+
+        .one {
+            /*flex: 1;*/
+            flex-grow: 1; /*扩大因子*/
+            /*flex-shrink: 4; !*缩小因子*!*/
+            height: 100px;
+            width: 100px;
+            background-color: darkcyan;
+        }
+
+        .two {
+            flex: 2;
+
+            background-color: cyan;
+        }
+
+        .three {
+            flex: 4;
+
+            background-color: deeppink;
+        }
+    </style>
+</head>
+<body>
+    <div class="big">
+        <div class="one">one</div>
+        <div class="two">two</div>
+        <div class="three">three</div>
+    </div>
+</body>
+</html>

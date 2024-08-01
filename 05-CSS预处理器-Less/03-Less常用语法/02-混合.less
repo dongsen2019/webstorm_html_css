@@ -1,0 +1,25 @@
+.border(@wh, @style, @color) {
+  border: @arguments;
+}
+
+// ()变为不带输出的混合特性, @参数, 10为不传参时的默认值,
+.circle(@radius:10, @b-width: 1) when (isnumber(@radius)) {
+  width: @radius * 2px; //在多方运算中,至少一方需要带单位
+  height: @radius * 2px;
+  //border: @b-width * 1px solid tomato;
+  .border(@b-width * 1px, solid, tomato); //使用混合+参数的特性
+  border-radius: 50%;
+
+  text-align: center;
+  line-height: @radius * 2px;
+}
+
+.c1 {
+  background-color: darkcyan; //混合特性
+  .circle(50,10)
+}
+
+.c2 {
+  background-color: deeppink;
+  .circle(80, @b-width: 6)  //命名参数
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11-无序列表</title>
+    <!--用style控制ul的标签样式-->
+    <style>
+        ul {
+            list-style-type: circle;
+            list-style-type: decimal;
+        }
+    </style>
+</head>
+<body>
+
+<!--使用Emmet语法生成ul列表:ul>li{条目$}*10-->
+<ul type="square">  <!--已废弃-->
+    <li>条目1</li>
+    <li>条目2</li>
+    <li>条目3</li>
+    <li>条目4</li>
+    <li>条目5</li>
+    <li>条目6</li>
+    <li>条目7</li>
+    <li>条目8</li>
+    <li>条目9</li>
+    <li>条目10</li>
+</ul>
+
+<!--有序列表-->
+<ol type="1" start="3" reversed> <!--start为起始值,reversed为反转-->
+    <li>条目1</li>
+    <li>条目2</li>
+    <li>条目3</li>
+    <li>条目4</li>
+    <li>条目5</li>
+    <li>条目6</li>
+    <li>条目7</li>
+    <li>条目8</li>
+    <li>条目9</li>
+    <li>条目10</li>
+</ol>
+
+<!--有序列表-->
+<ol type="A" start="D" reversed> <!--start为起始值,仅对数字有效,reversed为反转-->
+    <li>条目1</li>
+    <li>条目2</li>
+    <li>条目3</li>
+    <li>条目4</li>
+    <li>条目5</li>
+    <li>条目6</li>
+    <li>条目7</li>
+    <li>条目8</li>
+    <li>条目9</li>
+    <li>条目10</li>
+</ol>
+
+<!--在li标签里面放a标签-->
+<ul>
+    <li>
+        <a href="https://www.baidu.com">xxx</a>
+    </li>
+</ul>
+
+<ul>
+    <li>aaa</li>
+    <li>
+        <ul>
+            <li>bbb</li>
+            <li>bbb</li>
+        </ul>
+    </li>
+</ul>
+
+<!--定义列表-->
+<dl>
+    <dt>浙江省</dt>
+    <dd>宁波</dd>
+    <dd>杭州</dd>
+
+    <dt>江苏省</dt>
+    <dd>南京</dd>
+</dl>
+</body>
+</html>

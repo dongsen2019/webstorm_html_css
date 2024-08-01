@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01-2D变换(形变)</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 300px;
+            background-color: tomato;
+            margin: 100px auto;
+        }
+
+        .box:hover {
+            /*transform: translate(100px, 200px); !*记得写单位*!*/
+            /*transform: translateY(50%);*/
+            /*transform: translateX(50%);*/
+            /*transform: rotateZ(90deg);*/
+            /*transform: scale(1.5,2-提交修改) rotateZ(45deg); !*多个形变*!*/
+            transform: translate(100px, 200px) rotateZ(45deg); /*旋转后xy轴也会改变位置,注意旋转和平移的先后顺序*/
+            /*transform-origin: 0 0; !*x的0%和y的0%*!*/
+            transform-origin: 50% 10%; /*x方向的0%和y的0%*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+
+    </div>
+</body>
+</html>

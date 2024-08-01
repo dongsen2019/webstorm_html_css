@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-浮动流-特性-5贴靠现象</title>
+
+    <style>
+        .box1 {
+            width: 800px;
+            height: 400px;
+            background-color: tomato;
+        }
+
+        .box2 {
+            width: 400px;
+            height: 190px;
+            background-color: cyan;
+            float: left;
+        }
+
+        .box3 {
+            width: 300px;
+            height: 200px;
+            background-color: orange;
+            float: left;
+        }
+
+        /*浮动元素的贴靠优先寻找最近的兄弟元素,如果没有,则寻找父元素*/
+        .box4 {
+            width: 101px;
+            height: 100px;
+            background-color: pink;
+            float: left;
+        }
+
+    </style>
+</head>
+<body>
+     <div class="box1">
+
+        <div class="box2">
+            box2
+        </div>
+
+        <div class="box3">
+            box3
+        </div>
+
+        <div class="box4">
+            box4
+        </div>
+
+    </div>
+
+</body>
+</html>

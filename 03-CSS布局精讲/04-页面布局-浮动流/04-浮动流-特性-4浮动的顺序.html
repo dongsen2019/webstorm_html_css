@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-浮动流-特性-4浮动的顺序</title>
+
+    <!--案例4 半脱离标准流-->
+    <style>
+        .box7 {
+            width: 200px;
+            height: 200px;
+            background-color: tomato;
+        }
+
+        .box8 {
+            width: 200px;
+            height: 200px;
+            background-color: darkcyan;
+            float: right;
+        }
+
+        .box9 {
+            width: 200px;
+            height: 200px;
+            background-color: blueviolet;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <!--案例4:浮动流以后,各元素的漂浮位置,需要考虑浮动的先后顺序按照HTML的摆放顺序而不是css的摆放顺序,浮动的先后顺序先浮动的在前面,后浮动的在后面-->
+    <div class="box7">
+
+    </div>
+
+    <div class="box8">
+
+    </div>
+
+    <div class="box9">
+
+    </div>
+</body>
+</html>

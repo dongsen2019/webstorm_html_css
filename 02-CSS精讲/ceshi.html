@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>子div上边距示例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .parent {
+            width: 800px;
+            height: 600px;
+            background-color: lightblue;
+            position: relative; /* 相对定位，确保子元素可以使用绝对定位 */
+        }
+        .child {
+            width: 200px;
+            height: 200px;
+            background-color: lightgreen;
+            position: absolute; /* 绝对定位 */
+            top: 500px; /* 相对于父元素顶部的500px */
+        }
+
+        .span {
+            width: 50px;
+            height: 20px;
+            background-color: green;
+
+
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="parent">
+    <img src="https://img.dota2.com.cn/dota2static/file/1fb0205c-c597-4fd6-bd54-7b42bdff01b4.jpg" alt="">
+</div>
+
+
+
+</body>
+</html>

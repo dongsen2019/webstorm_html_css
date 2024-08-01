@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>19-个人信息采集</title>
+    <style>
+        table {
+            /*border-collapse: collapse;*/
+        }
+    </style>
+</head>
+<body>
+<form action="">
+    <table border="1">
+        <caption>个人信息采集</caption>
+
+        <thead>
+            <tr>
+                <th width="100">采集字段</th>
+                <th width="400">输入数据</th>
+            </tr>
+        </thead>
+
+        <tfoot>
+            <tr>
+                <td colspan="2" align="center">请认真填写各个字段<label><input type="submit" value="提交"></label></td>
+
+            </tr>
+        </tfoot>
+
+        <tbody>
+            <tr>
+                <td>姓名</td>
+                <td>
+                    <label>
+                        <input type="text" name="name" placeholder="请输入您的姓名" size="30">
+                    </label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>性别</td>
+                <td>
+                    <label><input type="radio" name="sex" value="male">男</label>
+                    <label><input type="radio" name="sex" value="female">女</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>年龄</td>
+                <td>
+                    <label>
+                        <input type="text" name="age" placeholder="请输入您的年龄" id="30">
+                    </label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>爱好</td>
+                <td>
+                    <label><input type="checkbox" name="ah">吃饭</label>
+                    <label><input type="checkbox" name="ah">睡觉</label>
+                    <label><input type="checkbox" name="ah">打怪兽</label>
+                </td>
+            </tr>
+
+            <tr>
+                <td>民族</td>
+                <td>
+                    <select name="minzu" value="hanzu" id="">
+                        <option selected>汉族</option>
+                        <option>满族</option>
+                        <option>藏族</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>简介:</td>
+                <td>
+                    <label><textarea name="context" id="context" cols="50" rows="10" style="resize: none"></textarea></label>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</form>
+</body>
+</html>
+
+

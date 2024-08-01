@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>23-层叠-特异性</title>
+    <style>
+        /* 0. 直接选中 > 间接选中 */
+        .box3 {
+            color: cyan;
+        }  /*父属性*/
+
+        p {
+            color: orangered;
+        }  /*自身属性,优先生效*/
+    </style>
+
+    <style>
+        /* 1. 选择器相同,就近选择 */
+        .xxx {
+            color: orangered;
+        }
+
+        .ooo {
+            color: cyan;
+        } /*就近生效*/
+    </style>
+
+    <style>
+        /* 2-提交修改. id > 类 > 标签 > 通配符 > 继承 > 浏览器默认 */
+        #one {
+            color: palegreen;
+        }
+
+        .xxx {
+            color: pink;
+        }
+
+        p {
+            color: tomato;
+        }
+
+        * {
+            color: deeppink;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div id="container">
+        <div class="box1">
+            <div class="box2">
+                <div class="box3">
+                    <p id="one" class="xxx ooo">撩课</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

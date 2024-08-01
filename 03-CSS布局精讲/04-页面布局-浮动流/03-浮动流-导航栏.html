@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-浮动流-导航栏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-bar {
+            width: 900px;
+            /*height: 50px; !*不指定父元素的高度,那就会根据子元素的高度撑起父元素的高度*!*/
+            background-color: tomato;
+            margin: 100px auto;
+        }
+
+        ul>li {
+            list-style: none;
+            width: 100px;
+            height: 50px;
+            background-color: darkcyan;
+            /*使用行内块级元素每个li标签之间会因为换行符的宽度出现小间隙*/
+            /*display: inline-block;*/
+            float: left;
+            text-align: center;
+            line-height: 50px;
+            color: white;
+        }
+
+        li:hover {
+            background-color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-bar">
+        <ul>
+            <li>菜单1</li>
+            <li>菜单2</li>
+            <li>菜单3</li>
+            <li>菜单4</li>
+            <li>菜单5</li>
+            <li>菜单6</li>
+            <li>菜单7</li>
+            <li>菜单8</li>
+        </ul>
+    </div>
+</body>
+</html>

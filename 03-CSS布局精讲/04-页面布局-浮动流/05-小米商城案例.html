@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05-小米商城案例</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        ul>li {
+            list-style: none;
+        }
+
+        body {
+            background-color: rgb(245,245,245);
+        }
+
+        .box-phone {
+            width: 1240px;
+            height: 628px;
+            /*background-color: rgb(245,245,245);*/
+            margin: 100px auto;
+        }
+
+        .left-pic {
+            width: 241px;
+            height: 628px;
+            /*background-color: darkcyan;*/
+            float: left;
+        }
+
+        .phone_list {
+            width: 999px;
+            height: 628px;
+            /*background-color: green;*/
+            float: left;
+        }
+
+        ul.left>li {
+            width: 220px;
+            height: 614px;
+            /*background-color: orange;*/
+            float: left;
+            margin: 7px;
+            margin-left: 14px;
+        }
+
+        ul.left>li:hover {
+            box-shadow: 0 15px 30px rgba(0,0,0,.1);
+        }
+
+        ul.right>li {
+            width: 234px;
+            height: 300px;
+            /*background-color: orange;*/
+            float: left;
+            margin: 7px;
+        }
+
+        ul.right>li:hover {
+            box-shadow: 0 15px 30px rgba(0,0,0,.1);
+        }
+
+        ul.left>li>img {
+            /*border: 1px solid red;*/
+            width: 100%;
+            height: 100%;
+        }
+
+        ul.right>li>img {
+            margin: 0 auto;
+            /*border: 1px solid red;*/
+            display: block;
+        }
+
+        p.name,
+        p.jj {
+            text-align: center;
+        }
+
+        p.price {
+            text-align: center;
+            margin: 13px auto;
+        }
+
+        span.left-price {
+            color: #ff6700;;
+        }
+
+        span.right-price {
+            font-size: 10px;
+            color: #B0B0B0;
+            text-decoration: line-through;
+        }
+
+        p.jj {
+            font-size: 12px;
+            color: #B0B0B0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-phone">
+        <div class="left-pic">
+            <ul class="left">
+                <li>
+                    <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/dcf9ed8c01a7c3d0bf3ecbca3f22537c.png?thumb=1&w=234&h=614&f=webp&q=90" alt="">
+                </li>
+            </ul>
+        </div>
+
+        <div class="phone_list">
+                <ul class="right">
+                    <li>
+                        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/adde6bae41441887017824f46cf31602.png?thumb=1&w=200&h=200&f=webp&q=90" alt="">
+                        <p class="name">Redmi Turbo 3</p>
+                        <p class="jj">性能旋风，席卷而来</p>
+                        <p class="price">
+                            <span class="left-price">1699元</span>
+                            <span class="right-price">1999元</span>
+                        </p>
+                    </li>
+                    <li>
+                        <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202403201526_60b548a0614d956b2d3667a63d513539.png?thumb=1&w=200&h=200&f=webp&q=90" alt="">
+                        <p class="name">Redmi Turbo 3</p>
+                        <p class="jj">性能旋风，席卷而来</p>
+                        <p class="price">
+                            <span class="left-price">1699元</span>
+                            <span class="right-price">1999元</span>
+                        </p>
+                    </li>
+                    <li>
+                        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/f2a277341a09a63bbb7bba12d154c4e6.png?thumb=1&w=200&h=200&f=webp&q=90" alt="">
+                        <p class="name">Redmi Turbo 3</p>
+                        <p class="jj">性能旋风，席卷而来</p>
+                        <p class="price">
+                            <span class="left-price">1699元</span>
+                            <span class="right-price">1999元</span>
+                        </p>
+                    </li>
+                    <li>
+                        <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/2e920ac7e3d197923acbd6388b80cc49.png?thumb=1&w=200&h=200&f=webp&q=90" alt="">
+                        <p class="name">Redmi Turbo 3</p>
+                        <p class="jj">性能旋风，席卷而来</p>
+                        <p class="price">
+                            <span class="left-price">1699元</span>
+                            <span class="right-price">1999元</span>
+                        </p>
+                    </li>
+                    <li>
+                        <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202311281411_fc68b941c011a8bbf67db570d0985d7a.png?thumb=1&w=200&h=200&f=webp&q=90" alt="">
+                        <p class="name">Redmi Turbo 3</p>
+                        <p class="jj">性能旋风，席卷而来</p>
+                        <p class="price">
+                            <span class="left-price">1699元</span>
+                            <span class="right-price">1999元</span>
+                        </p>
+                    </li>
+                    <li>
+                        <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202311281019_bf131f8cb94d59e370cb84cae6ad5e49.png?thumb=1&w=200&h=200&f=webp&q=90" alt="">
+                        <p class="name">Redmi Turbo 3</p>
+                        <p class="jj">性能旋风，席卷而来</p>
+                        <p class="price">
+                            <span class="left-price">1699元</span>
+                            <span class="right-price">1999元</span>
+                        </p>
+                    </li>
+                    <li>
+                        <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202310251928_35fb2880108e9aa56fdcf7f894249f26.png?thumb=1&w=200&h=200&f=webp&q=90" alt="">
+                        <p class="name">Redmi Turbo 3</p>
+                        <p class="jj">性能旋风，席卷而来</p>
+                        <p class="price">
+                            <span class="left-price">1699元</span>
+                            <span class="right-price">1999元</span>
+                        </p>
+                    </li>
+                    <li>
+                        <img src="https://cdn.cnbj1.fds.api.mi-img.com/nr-pub/202310251937_a4ac1ae382a402426beb915f401e50e5.png?thumb=1&w=200&h=200&f=webp&q=90" alt="">
+                        <p class="name">Redmi Turbo 3</p>
+                        <p class="jj">性能旋风，席卷而来</p>
+                        <p class="price">
+                            <span class="left-price">1699元</span>
+                            <span class="right-price">1999元</span>
+                        </p>
+                    </li>
+                </ul>
+        </div>
+    </div>
+
+</body>
+</html>

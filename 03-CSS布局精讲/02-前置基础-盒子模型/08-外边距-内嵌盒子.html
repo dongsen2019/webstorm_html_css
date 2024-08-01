@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08-外边距-内嵌盒子</title>
+
+    <style>
+        .big {
+            width: 400px;
+            height: 400px;
+            background-color: tomato;
+            overflow: hidden; /*父元素超出外边距部分隐藏*/
+        }
+
+        .small {
+            width: 200px;
+            height: 200px;
+            background-color: cyan;
+            margin: 50px; /*由于它的父元素没有添加外边距,所以外边距合并,父元素的外边距也为50px,导致页面上部有空白位置,解决方案是给父元素添加边框或者内边距,也可以使用overflow:hidden*/
+            margin: 0 auto;
+        }
+
+        span {
+            background-color: tomato;
+            margin: 30px;  /*行内元素的边距只有左右边距,且不合并*/
+        }
+    </style>
+</head>
+<body>
+    <div class="big">
+        <div class="small">
+            <span>span标签</span>
+            <span>span标签</span>
+        </div>
+    </div>
+</body>
+</html>

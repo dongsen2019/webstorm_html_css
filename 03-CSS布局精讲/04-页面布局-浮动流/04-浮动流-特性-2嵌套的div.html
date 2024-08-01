@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-浮动流-特性-2</title>
+
+    <!--   案例2 BaseCss -->
+    <style>
+        .box3 {
+            height: 300px;
+            width: 300px;
+            background-color: tomato;
+            padding: 20px 20px;
+        }
+
+        .box4 {
+            width: 150px;
+            height: 150px;
+            background-color: darkcyan;
+            margin: 20px 20px;
+            float: right; /*浮动流的元素会找到最近的父元素的边界对齐,如果有内外边距,则在边距以内*/
+        }
+    </style>
+</head>
+<body>
+<!--案例2:box嵌套-->
+    <div class="box3">
+        <div class="box4"></div>
+    </div>
+
+    <div class="blank">
+
+    </div>
+</body>
+</html>
