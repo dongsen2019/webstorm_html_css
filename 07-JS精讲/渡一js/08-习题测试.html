@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08-习题测试</title>
+</head>
+<body>
+<script>
+    // 打印100以内的素数
+    for (let i = 2; i < 100; i++) {
+        let count = 0;
+        for (let j = 2; j < i; j++) {
+            if ((i % j) === 0)  {
+                count += 1;
+            }
+        }
+        if (count === 0) {
+            document.write(i.toString(), " ")
+        }
+    }
+
+    // 输入456 反向输出 654
+    a = 456
+    n_100 = parseInt(a / 100)
+    n_10 = parseInt((a % 100) / 10)
+    n_1 = parseInt(((a % 100) % 10))
+
+    document.write(n_1,n_10,n_100)
+</script>
+</body>
+</html>

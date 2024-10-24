@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>18-21闭包函数</title>
+</head>
+<body>
+<script>
+    // 闭包和作用域(对象执行期的上下文)
+    function a() {
+        function b() {
+            // console.log(cc);
+            function c() {
+                var cc = 123;
+            }
+            c();
+        }
+        b();
+    }
+    a();
+
+    // a defined a.[[scope]] -- > 0:GO
+
+
+    // a doing   a.[[scope]] -- > 0:aAO
+    //                            1:GO
+
+    // b defined b.[[scope]] -- > 0:aAO
+    //                            1:GO
+
+
+    // b doing   b.[[scope]] -- > 0:bAO
+    //                            1:aAO
+    //                            2:GO
+
+    // c defined c.[[scope]] -- > 0:bAO
+    //                            1:aAO
+    //                            2:GO
+
+
+    // c doing c.[[scope]]   -- > 0:cAO
+    //                            1:bAO
+    //                            2:aAO
+    //                            3:GO
+
+</script>
+
+<script>
+    // 立即执行函数
+    // 针对初始化功能的函数
+    var n = (function (a,b,c) {
+
+        console.log(a+b+c);
+        return a + b + c
+    }(1,2,3)); // 该函数被执行完,立即会被销毁,此处一定要加;!!!!
+
+
+    // (function (){}()); W3C 建议第一种
+    // (function (){});
+    // 只有表达式才能被执行符号执行
+
+    // let test1 = function () {
+    //     console.log('a');
+    //     return 0
+    // }()  // 不建议使用这种
+
+
+    (function () {
+        console.log('a');
+        return 0;
+    })(); // W3C建议使用这种
+
+    (function (a, b, c, d){
+        console.log('a');
+        return 0;
+    }(1, 2, 3, 4)); // W3C建议使用这种
+</script>
+
+<script>
+    // 闭包函数
+    function test() {
+        let arr = [];
+        for (let i = 0; i < 10; i++) {
+            arr[i] = function () {
+                document.write(i + " ")
+            }
+        }
+        return arr;
+    }
+
+    myArr = test();
+    for (let j = 0; j < 10; j++) {
+        myArr[j]();
+    }
+    // let 和 var 的区别: let 有块级作用于,会为每个循环块单独存放一个i值,所以是0-10,
+    // 而var没有块级作用域,所以是打印10个10
+</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象,包装类(上)</title>
+</head>
+<body>
+<script>
+    // 这种语法构造出来的类,像是字典
+    let mrDeng = {
+        name: "MrDeng",
+        age: 40,
+        health : 100,
+        smoke : function () {
+            console.log('I am smoking ! cool!!!');
+            mrDeng.health --;
+        },
+        drink : function () {
+            console.log('I am drink');
+            mrDeng.health ++;
+        }
+    }
+
+    mrDeng.wife = "xiaoliu"
+    console.log(mrDeng.wife)
+    delete mrDeng.wife
+    console.log(mrDeng)
+</script>
+
+<script>
+    // 对象创建方法
+    // 1.var obj = {}   plainObject     对象字面量/对象直接量
+    // 2.构造函数
+    //      1) 系统自带的构造函数    Object()
+    //      2) 自定义
+
+
+    // ES5构造类的语法
+    // function Car(color) {
+    //     //当使用new关键字来构造一个新的对象时, 隐式 var this = {}
+    //     this.color = color
+    //     this.name = 'BMW';
+    //     this.height = '1400';
+    //     this.long = '4900';
+    //     this.weight = 1000;
+    //     this.health = 100;
+    //     this.run = function () {
+    //         this.health --;
+    //     }
+    //     // return this
+    // }
+    //
+    // let car = new Car('red');
+    // let car1 = new Car('green')
+
+    // ES6构造类的语法
+    class Car {
+        // 初始化
+        constructor(color) {
+            this.color = color
+            this.name = 'BMW';
+            this.height = '1400';
+            this.long = '4900';
+            this.weight = 1000;
+            this.health = 100;
+        }
+
+        //定义方法
+        run() {
+            this.health --;
+        }
+    }
+
+    let car = new Car('red')
+    car.run()
+
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3-外链式</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: tomato;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" onclick="handlerClick()" onmouseover="handlerOver()" onmouseout="handlerOut()">
+        lanlingking
+    </div>
+
+    <script type="text/html">
+        常用于争端注释JS代码
+    </script>
+
+    <script src="./link.js" type="text/javascript">
+        // 外链式的JS引入,标签内不要再写JS,不会被执行
+    </script>
+
+    <script>
+        function handlerClick() {
+            alert(123)
+        }
+
+        function  handlerOver() {
+            console.log('进来了')
+        }
+
+        function handlerOut() {
+            console.log('出去了')
+        }
+
+    </script>
+
+</body>
+</html>

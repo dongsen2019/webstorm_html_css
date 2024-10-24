@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>40-dom基本操作</title>
+</head>
+<body>
+
+<div>
+    <strong>
+        <span>
+            <i></i>
+        </span>
+    </strong>
+</div>
+
+<script>
+    // document --> HTMLDocument.prototype --> Document.prototype
+
+    // case1: 返回元素的第n层父级元素
+
+    function returnParent(ele, n) {
+        let return_ele = ele;
+        while(return_ele != null && n>0) {
+            return_ele = return_ele.parentElement;
+            n = n-1;
+        }
+        return return_ele;
+    }
+
+    let e = document.getElementsByTagName('i')[0];
+</script>
+
+<script>
+    // case2: 重写 Element.prototype.myChildren
+
+
+</script>
+</body>
+</html>
+

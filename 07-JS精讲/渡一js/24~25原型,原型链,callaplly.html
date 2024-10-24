@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>原型,原型链,call/apply</title>
+</head>
+<body>
+<script>
+    // class Person {
+    //     constructor(name) {
+    //         this.name = name;
+    //     }
+    // }
+    //
+    // let person = new Person('sunny');
+    //
+    // Person.prototype.name = 'cherry';
+
+    //call函数
+    class Person {
+        constructor(name, age) {
+            this.name = name
+            this.age = age
+        }
+    }
+
+    let person = new Person('deng', 100);
+
+    let obj = {
+
+    }
+
+    Person.call(obj, 'cheng', 300);
+
+</script>
+</body>
+</html>

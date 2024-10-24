@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 数组去重
+    let arr1 = [1,4,2,4,2,3,1,3]
+
+    Array.prototype.unique = function () {
+        let temp = {};
+        let arr_temp = [];
+
+        let arr_len = this.length;
+        for (let i = 0; i < arr_len; i++) {
+            console.log(!temp[String(this[i])])
+            if (!temp[String(this[i])]) {
+                temp[String(this[i])] = 'abc';
+                arr_temp.push(this[i]);
+                console.log(arr_temp)
+            }
+        }
+
+        return arr_temp
+    }
+
+</script>
+</body>
+</html>
+
+
+

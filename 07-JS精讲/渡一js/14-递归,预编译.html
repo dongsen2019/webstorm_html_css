@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>14-递归,预编译</title>
+</head>
+<body>
+<script>
+    // 递归,斐波那契和阶乘
+    function dg (n) {
+        if (n === 1 || n === 0) {
+            return 1
+        }
+        else {
+            return n * dg(n - 1)
+        }
+    }
+
+    jc = dg(20)
+    console.log(jc)
+
+    function fbnq(n) {
+        if (n === 1 || n === 2) {
+            return 1
+        }
+        return fbnq(n - 1) + fbnq(n - 2)
+    }
+
+    fb = fbnq(20)
+    console.log(fb)
+</script>
+
+<script>
+    // 预编译
+    // 函数声明整体提升到最上面
+
+    test()
+
+    function test() {
+        console.log("adad")
+    }
+
+    // 任何变量未经声明就使用,归window所有
+    a = 10; //window.a = 10
+
+    // 预编译
+    // 1. 创建AO对象 (Activation Object) (执行期上下文)
+    // 2. 找行参和变量声明,将变量和形参名称作为AO属性名, 值为undefined
+    // 3. 将实参值和形参统一
+    // 4. 在函数体里面找函数声明,挂入AO属性名,值赋予函数体
+
+    function fn(a) {
+        console.log(a);
+
+        var a = 123;
+
+        console.log(a);
+
+        function a() {}
+
+        console.log(a);
+
+        let b = function () {}
+
+        console.log(b)
+
+        function d() {}
+    }
+
+    fn(1)
+
+    /*
+    AO {
+        a: 1; ==> a: function a() {}; ==> a: 123
+        b: undefined;                 ==> b: function () {}
+              ==> d: function d();
+    }
+
+    全局变量
+    GO {
+
+    }
+    */
+
+</script>
+</body>
+</html>
+
+
+
+

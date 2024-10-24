@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>test</title>
+</head>
+<body>
+<script>
+    let n = (function (a,b,c) {
+        console.log(a+b+c);
+        return a + b + c
+    }(1,2,3)); // 该函数被执行完,立即会被销毁
+
+    (function () {
+        console.log('a');
+        return 0;
+    })(); // W3C建议使用这种
+
+
+</script>
+</body>
+</html>

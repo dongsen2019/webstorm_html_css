@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>数组</title>
+</head>
+<body>
+    <script>
+        arr = [10];
+        arr1 = new Array(10);  // 声明一个长度为10的数组
+        arr1[0] = 10;
+
+        arr1.push(1,2,3); // 在数组的末尾增加元素
+
+        arr1.pop(); // 取出数组末尾的元素,并返回
+
+        arr1.unshift(-1, -2); // 在数组的前面增加元素
+
+        arr1.reverse(); //反转数组
+
+        arr1.splice(1,2,3,3); // 从第一位开始切片,切去两位,然后把 3,3 放入切片位置
+
+        arr1.slice(1,2)  // 截取的起始位置1,终止位置2,左闭右开
+    </script>
+
+    <script>
+        // 重写数组的 push 方法
+        let arr = [1,2,3];
+        Array.prototype.push = function () {
+            for (let i = 0; i < arguments.length; i++) {
+                this[this.length] = arguments[i];
+            }
+
+            return this.length;
+        }
+
+        arr.push(4,5,6);
+
+    </script>
+
+    <script>
+        // 重写数组的 unshift 方法
+        let arr2 = [1,2,3];
+        Array.prototype.unshift = function () {
+            let arr_new = [];
+            let n_arg = arguments.length;
+            let n_arr = this.length;
+
+            for (let i = 0; i < n_arr; i++) {
+                arr_new[n_arg+i] = this[i];
+            }
+            for (let i = 0; i < n_arg; i++) {
+                arr_new[i] = arguments[i];
+            }
+            for (let i = 0; i < arr_new.length; i++) {
+                this[i] = arr_new[i];
+            }
+            return arr_new;
+        }
+
+        arr2.unshift(-2,-1);
+    </script>
+
+    <script>
+        // 排序
+        arr_sort = [1,4,10,3,5];
+        arr_sort.sort(function (a,b) {
+            return (a - b); // 升序
+            // return (b - a); // 降序
+        })
+    </script>
+
+    <script>
+        // 类数组
+        // 属性要为索引(数字)属性, 必须有length属性,最好加上push
+        // 好处: 整合了数组和对象的索引特性
+
+        let obj = {
+            "0": 'a',
+            "1": 'b',
+            "2": 'c',
+            "length" : 3,
+            "push" : Array.prototype.push,
+            "splice" : Array.prototype.splice
+        }
+        // 属性要为索引(数字)属性, 必须有length属性, 最好加上push
+        // 好处
+        Array.prototype.push = function (target){
+            this[this.length] = target;
+            this.length ++;
+        }
+    </script>
+
+
+</body>
+</html>
+

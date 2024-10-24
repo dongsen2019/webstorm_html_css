@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>28-继承模式</title>
+</head>
+<body>
+<script>
+    obj = {
+        name: "13",
+        age: 123,
+        sex: "male",
+        height: 180,
+        weight: 75,
+        __proto__ : {
+            lastName : "deng"
+        }
+    }
+
+    // A对象的原型链上 有没有 原型B
+
+    class Person {
+
+    }
+
+    let person = new Person()
+
+    console.log(person instanceof Person)
+
+    //for 循环 遍历对象的属性值
+
+    for(let key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            console.log(obj[key])
+        }
+        console.log(obj.hasOwnProperty(key))
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05-JS介绍,入门</title>
+</head>
+<body>
+<!--
+    1.主流浏览器
+        IE          trident
+        Chrome      webkit/blink
+        firefox     Gecko
+        Opera       presto
+        Safari      webkit
+
+-->
+
+<!--2.变量和打印-->
+<script>
+    let a = 10, b = 20;
+    // document.write(a.toString(),b)
+
+</script>
+
+<!--3.数据类型-->
+<script>
+    /*
+    原始值: Number Boolean String Undefined null  存储方式: 栈 Stack
+
+    引用值: 存储方式: Heap
+    */
+
+    let t = true;
+    let s = "123";
+    let s2= '123';
+    let n = null;
+    let q = s;
+    s = "222";
+
+    let arr = [1,2];
+    let arr2 = arr;
+    arr.push(3);
+
+    document.write(arr," ",arr2);
+
+</script>
+
+<!--3.分号问题-->
+<script>
+    //这三个尾部不需要加分号
+    function test () {
+
+    }
+
+    for() {
+
+    }
+
+    if() {
+
+    }
+</script>
+</body>
+</html>

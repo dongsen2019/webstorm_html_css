@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>try-catch</title>
+</head>
+<body>
+
+<script>
+    // 当前的浏览器都优先支持ES5标准，并向后兼容ES3。如果出现语法冲突，现代浏览器会优先采用ES5的解析方式。
+    function demo() {
+        console.log(arguments.callee)
+    }
+
+    demo();
+
+    function test() {
+        "use strict";
+        console.log(arguments.callee)  // 在ES 5.0的严格模式中,报错
+    }
+
+    test();
+</script>
+
+</body>
+</html>
