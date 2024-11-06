@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>46-窗口属性获取尺寸</title>
+</head>
+<body>
+    <div style="width: 100px;height: 100px;"></div>
+
+<script>
+    // window.scrollX  获取滚动条X轴方向的移动距离
+    // window.scrollY  获取滚动条Y轴方向的移动距离
+
+    // window.innerHeight/window.innerWidth  获取HTML部分的视口尺寸
+    // document.documentElement.clientHeight/document.documentElement.clientWidth  标准模式下,任意浏览器都兼容
+
+    // CSS1Compat 标准模式
+    // BackCompat 怪异模式
+
+    let div = document.querySelectorAll('div')[0]
+    // div.getBoundingClientRect()
+    // -- 该方法返回你一个对象,对象里面有left,top,right,bottom等属性.left和top代表元素左上角x,y的坐标,
+    // right和bottom代表元素右下角的x,y坐标, 返回的结果并不是实时的
+
+    // dom.offsetWidth, dom.offsetHeight  查看元素的尺寸
+
+
+    // dom.offsetLeft, dom.offsetTop 查看元素的位置 寻找最近的定位流元素
+
+
+    // dom.offsetParent 返回最近的有定位的父级,如无,返回body, body.offsetParent返回null
+    // 习题:封装一个函数,求元素相对于文档的坐标 getElementPosition
+
+    // window上有是哪个方法 scroll(),scrollTo()   scrollBy();
+    // 三个方法功能类似, 用法都是将x,y坐标传入.即实现让滚动轮滚动到当前位置.
+    // 区别: scrollBy()会在之前的数据基础之上做累加.
+    // eg:利用scrollBy()快速阅读的功能
+
+
+</script>
+</body>
+</html>

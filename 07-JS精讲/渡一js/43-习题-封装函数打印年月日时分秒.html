@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日期时间函数封装</title>
+</head>
+<body>
+<script>
+    function return_datetime() {
+        let now = new Date()
+        let year = now.getFullYear()
+        let month = now.getMonth() + 1
+        let day = now.getDate()
+        let hours = now.getHours()
+        let min = now.getMinutes()
+        let sec = now.getSeconds()
+
+        console.log(year + '.' + month + '.' + day + ' '+ hours + ':' + min + ':' + sec)
+    }
+
+
+    // setInterval();    循环定时器
+    // setTimeout();     延时器
+    // clearInterval();  
+    // clearTimeout();
+</script>
+</body>
+</html>

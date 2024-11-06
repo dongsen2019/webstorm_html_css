@@ -14,6 +14,15 @@
     </strong>
 </div>
 
+<div>
+    <strong></strong>
+    <span></span>
+    123
+    <header></header>
+    <i></i>
+    <div></div>
+</div>
+
 <script>
     // document --> HTMLDocument.prototype --> Document.prototype
 
@@ -33,8 +42,79 @@
 
 <script>
     // case2: 重写 Element.prototype.myChildren
+    Element.prototype.myChildren = function () {
+        let children = this.childNodes;
+        let len = children.length;
+        let arr = [];
+        for (let i = 0; i < len; i++) {
+            if (children[i].nodeType === 1) {
+                arr.push(children[i]);
+            }
+            return arr;
+        }
+    }
+
+    let div1 = document.getElementsByTagName('div')[0]
+
+</script>
+
+<script>
+    // case3: 编写一个函数,寻找某个元素节点的第n个兄弟节点
+    // 当n为正数时,寻找后面的节点,当n为负数时,寻找前面的节点
+    function retSibling(e, n) {
+        let ele = e;
+        while(ele && n) {
+            if(n > 0) {
+                ele = ele.nextElementSibling;
+                n--;
+            }
+            else {
+                ele = ele.previousElementSibling;
+                n++;
+            }
+        }
+        return ele
+    }
+
+    let header = document.getElementsByTagName('header')[0]
+</script>
 
 
+<script>
+    // case3: 编写一个函数,寻找某个元素节点的第n个兄弟节点
+    // 当n为正数时,寻找后面的节点,当n为负数时,寻找前面的节点(为了兼容IE9以下的版本,不允许使用nextElementSibling/previousElementSibling)
+    function retSibling(e, n) {
+        let ele = e;
+        while(ele && n) {
+            if(n > 0) {
+                if(0 && ele.nextElementSibling) {
+                    ele = ele.nextElementSibling;
+                }
+                else {
+                    ele = ele.nextSibling;
+                    while (ele && ele.nodeType !== 1) {
+                        ele = ele.nextSibling;
+                    }
+                }
+                n--;
+            }
+            else {
+                if(0 && ele.previousElementSibling) {
+                    ele = ele.previousElementSibling;
+                }
+                else {
+                    ele = ele.previousSibling;
+                    while (ele && ele.nodeType !== 1) {
+                        ele = ele.previousSibling;
+                    }
+                }
+                n++;
+            }
+        }
+        return ele
+    }
+
+    let header2 = document.getElementsByTagName('header')[0]
 </script>
 </body>
 </html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>三分钟就停止的计时程序</title>
+    <style>
+        input {
+            border: 1px solid rgba(0,0,0,0.8);
+            text-align: right;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <label>
+        <input type="text" value="0" name="minutes">
+    </label>
+    <label>
+        <input type="text" value="0" name="seconds">
+    </label>
+
+    <script>
+        let min = document.querySelectorAll('input[name="minutes"]')[0];
+        let sec = document.querySelectorAll('input[name="seconds"]')[0];
+
+
+        let timer = setInterval(function () {
+            if(parseInt(min.getAttribute('value')) !== 3) {
+                if(parseInt(sec.getAttribute('value')) < 59) {
+                    sec.setAttribute('value', (parseInt(sec.getAttribute('value')) + 1).toString())
+                }
+                else if(parseInt(sec.getAttribute('value')) === 59) {
+                    sec.setAttribute('value', '0')
+                    min.setAttribute('value', (parseInt(min.getAttribute('value')) + 1).toString())
+                }
+            }
+            else {
+                clearInterval(timer)
+            }
+        }, 50)
+
+    </script>
+</body>
+</html>

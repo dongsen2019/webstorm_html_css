@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>41-dom的基本操作-中</title>
+</head>
+<body>
+<script>
+    //增
+        // document.createElement();
+        // document.createTextNode();
+        // document.createComment();
+        // document.createDocumentFragment();
+
+
+    //插
+        // PARENTNODE.appendChild();
+        // PARENTNODE.interBefore(a, b); insert a before b
+
+    //删
+        // parent.removeChild();
+        // child.remove();
+
+    //替换
+        // parent.replaceChild(new, origin)
+</script>
+
+<script>
+    // 编写一段JS代码生成dom结构
+    let div = document.createElement('div')
+    div.setAttribute('class', 'example')
+    let p = document.createElement('p')
+    p.setAttribute('class', 'slogan')
+
+    let td = document.createTextNode('hello, world!')
+
+    div.appendChild(p)
+    p.appendChild(td)
+
+    document.body.appendChild(div)
+
+</script>
+</body>
+</html>

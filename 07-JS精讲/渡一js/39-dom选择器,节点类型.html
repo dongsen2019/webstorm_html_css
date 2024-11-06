@@ -18,8 +18,10 @@
 <!--    </script>-->
 
     <script>
-        let div = document.querySelectorAll('div')  // 快照方式,后续dom被增删改查后,他不受影响
+        let div = document.querySelectorAll('div') // 快照方式,后续dom被增删改查后,他不受影响
         let demo = document.getElementsByClassName('demo')[0] // 实时更新方式
+
+        console.log(div[0].nodeType)
     </script>
 
     <script>
@@ -62,3 +64,4 @@
     </script>
 </body>
 </html>
+
