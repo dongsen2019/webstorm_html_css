@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>48-事件(上)</title>
+</head>
+<body>
+<script>
+    //绑定事件的3种方式
+
+    // 1. on 的绑定方式
+    ele.onXXX = function(event) {
+
+    }
+
+    // 2. obj.addEventListener(type:事件类型, fn:匿名函数或函数名, false)
+
+
+    // 3. IE独有: attachEvent(type, fn)
+
+
+    // 清除事件的三种方式
+
+    // 1. ele.onclick = false/''/null
+
+    // 2. ele.removeEventListener(type, fn, false);
+
+    // 3. ele.detachEvent('on' + type, fn);
+
+    // 事件处理模型 - 事件冒泡\捕获
+
+    // 事件冒泡: HTML结构上(非视觉上)嵌套关系的元素,会存在事件冒泡的功能, 即同一事件,自子元素冒泡向父元素.(自底向上)
+
+    // 事件捕获: HTML结构上(非视觉上)嵌套关系的元素, 会存在事件捕获的功能,即同一事件,自父元素捕获至子元素(事件源元素).(自顶向下)
+    // IE没有捕获事件 使用捕获模型,将false改为true --> obj.addEventListener(type:事件类型, fn:匿名函数或函数名, true)
+
+
+    // 特殊: focus, blur, change, submit, reset, select等事件不冒泡
+
+
+    // div.onclick = function (e) { e.stopPropagation(); e.cancelBubble = true; this.style.background = 'green';}
+
+
+    // 阻止默认事件:
+    // 默认事件 -- 表单提交, a标签跳转, 右键菜单等
+
+    // 1.return false; 以对象属性的方式注册的事件才有效
+
+    // 2.event.preventDefault(); W3C标注,IE9以下不兼容
+
+    // 3.event.returnValue = false; 兼容IE
+
+</script>
+
+</body>
+</html>
