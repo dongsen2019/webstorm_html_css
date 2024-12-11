@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React-基本使用</title>
+</head>
+<body>
+
+<div id="root"></div>
+
+<!--1.第一个引入的库: React核心库-->
+<script src="../lib/react.development.js"></script>
+
+<!--2. 用于渲染的库-->
+<script src="../lib/react-dom.development.js"></script>
+
+<!--3. babel库用于将高级js语法(ES6+)降级 / 并将JSX语法转换-->
+<script src="../lib/babel.min.js"></script>
+
+
+<!--添加这么一个特定标识以后,babel 就会帮你转换内部的jsx语法-->
+<script type="text/babel">
+    // 1. 创建虚拟dom对象
+    let v_dom1 = React.createElement("div", {onClick: ()=>{console.log(("click"))}}, "包裹sz");
+
+    // 2. 把虚拟dom对象, 渲染到某一个页面容器
+    ReactDOM.render(v_dom1, document.getElementById("root"));
+
+</script>
+
+
+<script>
+    // console.log(React);
+
+    // 1.创建一个虚拟DOM对象 JS-React的原生语法
+    let v_a = React.createElement("a", null, "超链接")
+    let v_dom = React.createElement("div", null, v_a)
+
+    // console.log(v_dom)
+</script>
+
+<script type="text/babel">
+
+    let v_dom_jsx = <div>
+        <a href="">超链接</a>
+    </div>
+
+    // ReactDOM.render(v_dom_jsx, document.getElementById("root"));
+
+</script>
+
+<script>
+
+    // console.log(ReactDOM);
+    // ReactDOM.render(v_dom, document.getElementById("root"));
+</script>
+
+</body>
+</html>

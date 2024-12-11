@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>向组件内部传递数据-组件的props</title>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script src="../lib/react.development.js"></script>
+<script src="../lib/react-dom.development.js"></script>
+<script src="../lib/babel.min.js"></script>
+
+<script type="text/babel">
+
+    function get_money(m) {
+        console.log("挣了:",m)
+    }
+
+    class One extends React.Component {
+
+        _makeMoney = () => {
+            let money = Math.random() * 100;
+            this.props.gm(money);
+        }
+        render() {
+            console.log(this.props)
+            const {name, age, address} = this.props.person;
+            return (
+                <div>
+                    <h1>{name}</h1>
+                    <h2>{age}</h2>
+                    <h3>{address}</h3>
+                    <button onClick={this._makeMoney}>赚钱</button>
+                </div>
+            )
+        }
+    }
+
+    let personData = {
+        name: "撩课-Sz",
+        age: 20,
+        address: "上海浦东"
+    }
+
+
+    // ES6语法,当给组件传参的时候,传入的键值对,会以键值对的形式保存在 属性props 的对象中
+    /*
+        props: {
+            person: {
+                name: "撩课-Sz",
+                age: 20,
+                address: "上海浦东"
+            }
+        }
+    */
+
+
+    // function One(props) {
+    //     const {name, age, address} = props.person;
+    //     return (
+    //         <div>
+    //             <h1>{name}</h1>
+    //             <h2>{age}</h2>
+    //             <h3>{address}</h3>
+    //         </div>
+    //     )
+    // }
+
+
+    // 在ES5的语法中, 使用函数定义类,则直接在函数变量名加入props参数
+    // 传入的参数依旧会被保存在 props这个参数对象中
+    /*
+        props: {
+            person: {
+                name: "撩课-Sz",
+                age: 20,
+                address: "上海浦东"
+            }
+        }
+    */
+
+    let v_dom = <div>
+        <One person={personData} level={"管理员"} gm = {get_money}/>  {/*此处的花括号是指明这个地方是一个参变量,而不是指 personData 是字典对象*/}
+    </div>
+
+    ReactDOM.render(v_dom, document.getElementById("root"));
+
+</script>
+
+</body>
+</html>

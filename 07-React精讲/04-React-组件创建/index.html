@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组件的使用</title>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script src="../lib/react.development.js"></script>
+<script src="../lib/react-dom.development.js"></script>
+<script src="../lib/babel.min.js"></script>
+
+<script type="text/babel">
+    
+    // 1. 组件的创建
+    // 1.1 函数的方式定义组件类
+    function Person() {
+        return <div>
+            <h1>ds</h1>
+            <h2>28</h2>
+            <h3>宁波</h3>
+        </div>
+    }
+
+    // *** 1.组件的命名首字母必须大写 2.return 的DOM必须只有一个根元素
+
+    // 1.2 类的创建方式
+    class Person extends React.Component {
+        render() {
+            return (
+                <div>
+                    <h1>ds</h1>
+                    <h2>28</h2>
+                    <h3>宁波</h3>
+                </div>
+            )
+        }
+    }
+
+    let v_dom = <Person/>
+
+    ReactDOM.render(v_dom,document.getElementById("root"));
+
+</script>
+</body>
+</html>

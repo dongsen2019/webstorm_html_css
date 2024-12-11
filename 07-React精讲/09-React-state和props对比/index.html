@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>props 和 state 对比</title>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script src="../lib/react.development.js"></script>
+<script src="../lib/react-dom.development.js"></script>
+<script src="../lib/prop-types.js"></script>
+<script src="../lib/babel.min.js"></script>
+
+<script type="text/babel">
+
+    class DTimer extends React.Component {
+        state = {
+            number: this.props.num
+        }
+
+        // 默认值包括类内部定义的变量以及外部传入的参数
+        static defaultProps = {
+            num: 0,
+            endCB: () => {}
+        }
+
+        static propTypes = {
+            num: PropTypes.number.isRequired,
+            endCB: PropTypes.func
+        }
+
+        _begin = () => {
+            let timer = setInterval(() => {
+
+                // 由于是在 setInterval 内部, 所以不存在异步操作
+                if(this.state.number === 0) {
+                    this.props.endCB()
+                    clearInterval(timer);
+                    return
+                }
+
+                this.setState((preState) => {
+                    return {
+                        number: preState.number - 1
+                    }
+                })
+            }, 1000)
+        }
+
+        render() {
+            return(
+                <div>
+                    <h1>{this.state.number}</h1>
+                    <button onClick={this._begin}>替你的生命倒数</button>
+                </div>
+
+            )
+        }
+    }
+
+    function endCB() {
+        console.log("倒计时结束: 0!")
+    }
+
+    let number = 6;
+
+    let v_dom = <div>
+        <DTimer num={number} endCB={endCB}/>
+        <DTimer />
+        <DTimer num={number}/>
+    </div>
+    ReactDOM.render(v_dom, document.getElementById("root"))
+
+</script>
+
+</body>
+</html>

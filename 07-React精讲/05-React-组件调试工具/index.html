@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="root"></div>
+
+<script src="../lib/react.development.js"></script>
+<script src="../lib/react-dom.development.js"></script>
+<script src="../lib/babel.min.js"></script>
+
+<script type="text/babel">
+
+    class One extends React.Component {
+        render() {
+            console.log(this.props)
+            const {name, age, address} = this.props.person;
+            return (
+                <div>
+                    <h1>{name}</h1>
+                    <h2>{age}</h2>
+                    <h3>{address}</h3>
+                </div>
+            )
+        }
+    }
+
+    let personData = {
+        name: "撩课-Sz",
+        age: 20,
+        address: "上海浦东"
+    }
+
+    let v_dom = <div>
+        <One person={personData}/>  {/*此处的花括号是指明这个地方是一个参变量,而不是指字典对象*/}
+    </div>
+
+    ReactDOM.render(v_dom, document.getElementById("root"));
+
+</script>
+
+</body>
+</html>
